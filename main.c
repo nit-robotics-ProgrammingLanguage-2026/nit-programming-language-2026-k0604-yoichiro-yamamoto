@@ -1,2 +1,18 @@
 #include <stdio.h>
-int main(void){int a;long s=0;scanf("%d",&a);if(a<0){printf("NG");return 0;}for(int i=1;;i++){if(i>a)break;if(i%3==0||i%5==0)continue;s+=i;}printf("%ld",s);return 0;}
+int main(void)
+{
+    int number;
+    long output=0;
+    scanf("%d",&number);
+    if(number<0){printf("NG");
+        return 0;
+    }
+    for(int loop=1;;loop++)
+    {
+        if(loop>number)break;//loopがnumberを超えるとループを終える
+        if(loop%3==0||loop%5==0)continue;//3と5の倍数の場合、足さないでループを続行する
+        output+=loop;
+    }
+    printf("%ld",output);
+    return 0;
+}
